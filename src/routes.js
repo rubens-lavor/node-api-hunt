@@ -5,6 +5,8 @@ const ProductController = require("./controllers/ProductController");
 
 
 routes.get("/products", ProductController.index);
+//.post sempre que for criar algo
+routes.post("/products", ProductController.store);
 
 
 module.exports = routes;
