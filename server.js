@@ -2,7 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require('morgan');
 
+
+
 const requireDir = require("require-dir");
+
 
 const cors = require("cors");
 
@@ -16,6 +19,7 @@ app.use(express.json());
 app.use(cors());
 
 const MONGODB_URL = 'mongodb+srv://rubens:rubens123@node-api.nx04e.mongodb.net/api-node-BD?retryWrites=true&w=majority';
+
 //iniciando o DB
 mongoose.connect(MONGODB_URL || 'mongodb://localhost:27017/nodeapi', {
     useNewUrlParser: true,
@@ -41,6 +45,12 @@ app.use("/api", require("./src/routes"));
 
 
 app.use(morgan('tiny'));
+
+
+
+
+
+/**-------------------------------------------------- */
 
 /*
 app.get('/api', (req, res) => {
@@ -112,3 +122,31 @@ if (process.env.NODE_ENW === 'prodution') {
 
 
 //instalando o insomnia para vizualizar as rotas de maneira mais fácil
+
+
+/**
+ * -------------------------------------------------------------------
+ */
+
+/**teste - ok*/
+
+
+/*
+const app = express();
+app.use(express.json());
+
+mongoose.connect("mongodb://localhost:27017/nodeapi",
+    {
+        useNewUrlParser: true ,
+        useUnifiedTopology: true
+    }
+);
+
+requireDir("./src/models");
+
+
+//rotas
+app.use("/api", require("./src/routes"));
+
+app.listen(8080);
+*/

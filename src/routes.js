@@ -1,6 +1,30 @@
 const express = require("express");
 const routes = express.Router();
 
+
+// a lógica dentro das rotas é colocado no controller
+//nesse caso n ProductController
+
+
+//teste - 0k
+/*
+const ProductController = require("./controllers/ProductController");
+
+routes.get("/products", ProductController.index);
+
+routes.post("/products", ProductController.store);
+
+routes.get("/products/:id", ProductController.show);
+
+routes.put("/products/:id", ProductController.update);
+
+routes.delete("/products/:id", ProductController.destroy);
+*/
+/**
+ * -----------------------------------------------------
+*/
+
+
 const ProductController = require("./controllers/ProductController");
 
 
