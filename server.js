@@ -9,10 +9,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const MONGO_URL ="mongodb://localhost:27017/nodeapi"
 
 //iniciando o DB
-mongoose.connect(MONGO_URL, {useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost:27017/nodeapi", 
+    {
+        useNewUrlParser: true , 
+        useUnifiedTopology: true
+    });
 
 //model registrado na aplicação
 // require('./src/models/Product');
