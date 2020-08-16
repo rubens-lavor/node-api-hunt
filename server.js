@@ -27,6 +27,6 @@ requireDir("./src/models");
 //rotas
 app.use("/api", require("./src/routes"));
 
-app.listen(process.env.PORT ||3001);
+app.listen(process.env.PORT || 8080);
 
 //instalando o insomnia para vizualizar as rotas de maneira mais fácil
