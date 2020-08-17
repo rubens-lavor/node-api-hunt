@@ -13,7 +13,7 @@ module.exports = {
         
         const { page = 1 } = req.query;
 
-        const products = await Product.paginate({  }, {page:page, limit:5 });
+        const products = await Product.paginate({  }, {page:page, limit:10 });
         //primeiro parametro seria para por condições, algum filtro. O segundo parametro a página atual, e  o limite de dados que será retornado por página
 
         return res.json(products);
